@@ -4,8 +4,8 @@ import TheHeader from "./components/TheHeader.vue";
 
 const nav = [
   { path: "/", key: "Inicio" },
+  { path: "/explore", key: "Explorar" },
   { path: "/markeds", key: "Favoritos" },
-  { path: "/blog", key: "Blog" },
 ];
 </script>
 

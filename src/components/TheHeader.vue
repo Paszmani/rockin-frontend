@@ -26,7 +26,7 @@ console.log(route);
     </div>
 
     <nav
-      class="bg-[#3D4350] text-sm shadow-inner text-gray-100 dark:bg-[#2e313a]"
+      class="bg-gray-200 text-sm shadow-inner dark:bg-[#14171c] flex justify-center"
     >
       <div class="max-w-7xl mx-auto px-4 py-2 flex gap-8 overflow-x-auto">
         <RouterLink
@@ -35,8 +35,11 @@ console.log(route);
           :to="link.path"
           class="pb-1 border-b-2 transition-all duration-300 whitespace-nowrap font-medium"
           :class="{
-            'text-yellow-400 border-yellow-400': route.path === link.path,
-            'text-gray-100 hover:text-yellow-300 hover:border-yellow-300':
+            'dark:text-red-400 dark:border-red-400': route.path === link.path,
+            'dark:text-gray-100 dark:hover:text-red-300 dark:hover:border-red-300':
+              route.path !== link.path,
+            'text-red-700 border-red-700': route.path === link.path,
+            'text-gray-700 hover:text-red-500 hover:border-red-500':
               route.path !== link.path,
           }"
         >
@@ -46,7 +49,7 @@ console.log(route);
     </nav>
 
     <div
-      class="h-3 w-full bg-gradient-to-b from-[#3D4350] to-[#4a5161] dark:from-[#111827] dark:to-[#1f2937]"
+      class="h-1 w-full bg-gradient-to-r from-indigo-400 via-pink-400 to-red-400 dark:from-indigo-600 dark:via-pink-500 dark:to-red-500 animate-gradient-x"
     ></div>
   </header>
 </template>
