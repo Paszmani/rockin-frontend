@@ -1,5 +1,5 @@
 interface ShowData {
-  showId: number;
+  id: number;
   title: string;
   description: string;
   releaseDate: string;
@@ -10,11 +10,20 @@ interface ShowData {
     ticketPrice?: number;
     duration?: number;
   };
+  band?: {
+    id: number;
+    name: string;
+  };
+  images?: {
+    url: string;
+    altText?: string;
+  }[];
 }
 
 interface SectionsData {
-  sectionId: number;
+  id: number;
   name: string;
+  score: number;
   data: ShowData[];
 }
 
